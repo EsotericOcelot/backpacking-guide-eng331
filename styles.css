@@ -1,0 +1,704 @@
+/* ---------- Theme ---------- */
+
+:root {
+  --background: #f6f4ed;
+  --surface: #fffef9;
+  --ink: #26342b;
+  --muted: #59645b;
+  --green: #294d38;
+  --green-light: #e7ede1;
+  --accent: #a44727;
+  --border: #d6dbcf;
+
+  --radius: 16px;
+  --content-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+}
+
+h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+h3,
+h4 {
+  line-height: 1.35;
+}
+
+a {
+  color: var(--green);
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+}
+
+/* ---------- Accessibility ---------- */
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  padding: 10px 18px;
+  background: var(--ink);
+  color: white;
+  border-radius: 6px;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  padding: 20px max(24px, calc((100vw - var(--content-width)) / 2));
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-name {
+  flex-shrink: 0;
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.site-header nav a {
+  padding: 5px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.site-header nav a:hover {
+  color: var(--accent);
+}
+
+/* ---------- Main layout ---------- */
+
+main,
+.site-footer {
+  width: min(var(--content-width), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 76px;
+  border-top: 1px solid var(--border);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 32px;
+}
+
+.section-heading > p:last-child {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.eyebrow {
+  margin-bottom: 18px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* ---------- Introduction ---------- */
+
+.hero {
+  padding-block: 90px 72px;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin-bottom: 26px;
+  color: var(--green);
+  font-size: clamp(3rem, 7.5vw, 5.8rem);
+}
+
+.hero-description {
+  max-width: 620px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 12px 23px;
+
+  background: var(--green);
+  color: white;
+  border: 2px solid var(--green);
+  border-radius: 8px;
+
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+.text-link {
+  display: inline-block;
+  margin-left: 22px;
+  padding-block: 12px;
+  font-weight: 600;
+}
+
+.audience-note {
+  max-width: 780px;
+  margin-top: 48px;
+  padding: 22px 26px;
+
+  background: var(--green-light);
+  border-left: 4px solid var(--green);
+  border-radius: 0 10px 10px 0;
+}
+
+.audience-note strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+.audience-note p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ---------- Planning steps ---------- */
+
+.planning-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: planning;
+}
+
+.planning-steps li {
+  counter-increment: planning;
+}
+
+.planning-steps li::before {
+  content: "0" counter(planning);
+  display: block;
+  margin-bottom: 16px;
+
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.planning-steps h3 {
+  margin-bottom: 12px;
+  font-size: 1.15rem;
+}
+
+.planning-steps p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+/* ---------- Equipment cards ---------- */
+
+[hidden] {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.gear-key {
+  max-width: 800px;
+  padding: 20px 24px;
+  background: var(--green-light);
+  border-radius: var(--radius);
+}
+
+.gear-key p {
+  margin-bottom: 10px;
+}
+
+.gear-key p:last-child {
+  margin-bottom: 0;
+}
+
+.gear-context,
+.gear-reviewed {
+  max-width: 800px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.gear-filters {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.gear-filter-field {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.gear-filter-field label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 650;
+}
+
+.gear-filter-field select {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  font: inherit;
+}
+
+#gear-count {
+  margin-block: 18px 28px;
+  color: var(--muted);
+}
+
+.gear-group + .gear-group {
+  margin-top: 38px;
+}
+
+.gear-label-condition {
+  background: #fbecdb;
+  color: #78401f;
+}
+
+.gear-label-comfort {
+  background: #ece8f4;
+  color: #56406f;
+}
+
+.gear-card .gear-source {
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.category-heading {
+  margin-bottom: 22px;
+  font-size: 1.15rem;
+}
+
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: 20px;
+}
+
+.gear-card {
+  min-width: 0;
+  padding: 26px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.gear-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 4px 10px;
+
+  background: var(--green-light);
+  color: var(--green);
+  border-radius: 5px;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.gear-card h4 {
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+}
+
+.gear-card > p {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.gear-card details {
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.gear-card summary {
+  cursor: pointer;
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 650;
+}
+
+.gear-card summary:hover {
+  color: var(--accent);
+}
+
+.gear-card details p {
+  margin-top: 14px;
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* ---------- Checklist ---------- */
+
+.checklist {
+  max-width: 800px;
+  padding: 8px 24px;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding-block: 18px;
+  cursor: pointer;
+}
+
+.checklist label + label {
+  border-top: 1px solid var(--border);
+}
+
+.checklist input {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin: 4px 0 0;
+  accent-color: var(--green);
+  cursor: pointer;
+}
+
+/* ---------- Resources and footer ---------- */
+
+.resource-list {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.resource-list a {
+  overflow-wrap: anywhere;
+}
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding-block: 28px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin-bottom: 0;
+}
+
+#checklist-progress {
+  margin-bottom: 16px;
+  color: var(--green);
+  font-weight: 650;
+}
+
+.checklist-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+button.button {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--green);
+}
+
+.button-secondary:hover {
+  background: var(--green-light);
+  border-color: var(--green);
+}
+
+.save-note {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 900px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-block: 14px;
+  }
+
+  html {
+    scroll-padding-top: 145px;
+  }
+
+  .gear-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .planning-steps {
+    gap: 20px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 600px) {
+  main,
+  .site-footer {
+    width: calc(100% - 36px);
+  }
+
+  .site-header {
+    position: static;
+    padding-inline: 18px;
+  }
+
+  .site-header nav {
+    gap: 4px 16px;
+  }
+
+  .site-header nav a {
+    font-size: 0.82rem;
+  }
+
+  html {
+    scroll-padding-top: 24px;
+  }
+
+  .hero {
+    padding-block: 54px;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .text-link {
+    display: block;
+    width: fit-content;
+    margin: 12px 0 0;
+  }
+
+  .audience-note {
+    margin-top: 32px;
+    padding: 18px;
+  }
+
+  .section {
+    padding-block: 48px;
+  }
+
+  .planning-steps,
+  .gear-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planning-steps {
+    gap: 32px;
+  }
+
+  .gear-card {
+    padding: 22px;
+  }
+
+  .checklist {
+    padding-inline: 18px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ---------- Printing ---------- */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+    font-size: 11pt;
+  }
+
+  .site-header,
+  .gear-filters,
+  #gear-count,
+  #gear-empty,
+  .skip-link,
+  .button,
+  .text-link,
+  .site-footer {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .hero,
+  .section {
+    padding-block: 20px;
+  }
+
+  .hero h1 {
+    font-size: 30pt;
+  }
+
+  h2 {
+    font-size: 22pt;
+  }
+
+  .planning-steps,
+  .gear-grid {
+    display: block;
+  }
+
+  .planning-steps li,
+  .gear-card {
+    margin-bottom: 16px;
+    break-inside: avoid;
+  }
+
+  .gear-card,
+  .audience-note,
+  .checklist {
+    background: white;
+    box-shadow: none;
+  }
+
+  a {
+    color: black;
+  }
+}

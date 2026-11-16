@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="A preparation guide for hikers planning their first backpacking trip.">
+
+  <title>Traveler’s Guide to Backpacking</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="#start">Traveler’s Guide</a>
+
+    <nav aria-label="Main navigation">
+      <a href="#plan">Plan Your Trip</a>
+      <a href="#gear">Gear</a>
+      <a href="#packing">Packing</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="start">
+      <p class="eyebrow">Your first backpacking trip</p>
+
+      <h1>A little planning.<br>A better adventure.</h1>
+
+      <p class="hero-description">
+        Take your hiking experience a step further. Build a trip plan,
+        understand your equipment, and prepare for your first nights
+        on the trail.
+      </p>
+
+      <a class="button" href="#plan">Start planning</a>
+      <a class="text-link" href="#gear">Explore the gear list</a>
+
+      <aside class="audience-note">
+        <strong>Who this guide is for</strong>
+        <p>
+          Hikers with basic outdoor experience who are new to backpacking.
+          This guide focuses on preparation for trips on established trails.
+          Advanced navigation, wilderness medicine, and winter expeditions
+          are outside its scope.
+        </p>
+      </aside>
+    </section>
+
+    <section class="section" id="plan">
+      <div class="section-heading">
+        <p class="eyebrow">01 / Plan your trip</p>
+        <h2>Start with where you’re going.</h2>
+        <p>
+          Your route, trip length, and expected conditions shape
+          the equipment and supplies you bring.
+        </p>
+      </div>
+
+      <ol class="planning-steps">
+        <li>
+          <h3>Choose a destination</h3>
+          <p>
+            Research trails through the park or land manager’s website.
+            Check access, permits, camping restrictions, and current alerts.
+          </p>
+        </li>
+
+        <li>
+          <h3>Build your itinerary</h3>
+          <p>
+            Record each day’s route, distance, elevation changes,
+            and planned campsite. Account for breaks and camp setup.
+          </p>
+        </li>
+
+        <li>
+          <h3>Research the conditions</h3>
+          <p>
+            Check expected weather, daylight, trail conditions,
+            and water availability. Recheck current information
+            before departure.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="gear">
+      <div class="section-heading">
+        <p class="eyebrow">02 / Choose your gear</p>
+        <h2>Know what you’re carrying—and why.</h2>
+        <p>Work through each category for a first trip on established trails.
+          Expand an item for its purpose, when it applies, and a source.</p>
+      </div>
+
+      <div class="gear-key" aria-label="How to read the gear labels">
+        <p><strong>Core:</strong> cover this need on every trip. Some equipment can be shared within your group.</p>
+        <p><strong>Condition-dependent:</strong> include when the route, weather, rules or your chosen setup requires it.</p>
+        <p><strong>Optional comfort:</strong> a personal extra after your essential needs are covered.</p>
+      </div>
+      <p class="gear-context">Check your land manager’s current requirements before choosing equipment.
+        Labels help you plan; a filtered view is not a complete packing list.</p>
+
+      <div class="gear-filters" id="gear-filters" hidden>
+        <div class="gear-filter-field">
+          <label for="gear-category">Category</label>
+          <select id="gear-category" aria-controls="gear-list">
+            <option value="all">All categories</option>
+            <option value="camp">Pack, shelter &amp; sleep</option>
+            <option value="food">Cooking, food &amp; water</option>
+            <option value="clothes">Clothing &amp; footwear</option>
+            <option value="nav">Navigation &amp; communication</option>
+            <option value="hygiene">Hygiene &amp; waste</option>
+            <option value="safety">First aid &amp; repairs</option>
+            <option value="comfort">Comfort extras</option>
+          </select>
+        </div>
+        <div class="gear-filter-field">
+          <label for="gear-applicability">When to bring it</label>
+          <select id="gear-applicability" aria-controls="gear-list">
+            <option value="all">All labels</option>
+            <option value="core">Core</option>
+            <option value="condition">Condition-dependent</option>
+            <option value="comfort">Optional comfort</option>
+          </select>
+        </div>
+        <button class="button button-secondary" id="clear-gear-filters" type="button">Show all gear</button>
+      </div>
+      <p id="gear-count" role="status" aria-live="polite">Showing all 37 items</p>
+      <p id="gear-empty" hidden>No items match these filters. Choose another category or show all gear.</p>
+      <div id="gear-list">
+        <section class="gear-group" data-gear-group="camp" aria-labelledby="gear-heading-camp">
+          <h3 class="category-heading" id="gear-heading-camp">Pack, shelter &amp; sleep</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="camp" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Backpack</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Backpack</span></summary>
+                <p><strong>Purpose:</strong> Carries and organizes your equipment.</p>
+                <p><strong>When it applies:</strong> Fit it with your full trip load before departure.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="camp" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Tent, rainfly &amp; stakes</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Tent, rainfly &amp; stakes</span></summary>
+                <p><strong>Purpose:</strong> Provide overnight shelter.</p>
+                <p><strong>When it applies:</strong> Use a complete setup suited to your destination. Practice pitching it.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="camp" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Sleeping bag</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Sleeping bag</span></summary>
+                <p><strong>Purpose:</strong> Provides insulation overnight.</p>
+                <p><strong>When it applies:</strong> Match it to expected nighttime temperatures.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="camp" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Sleeping pad</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Sleeping pad</span></summary>
+                <p><strong>Purpose:</strong> Insulates and cushions you from the ground.</p>
+                <p><strong>When it applies:</strong> Pair it with your sleeping bag.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="camp" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Waterproof pack protection</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Waterproof pack protection</span></summary>
+                <p><strong>Purpose:</strong> Keeps your sleep gear dry.</p>
+                <p><strong>When it applies:</strong> Use a pack cover and waterproof storage for your sleeping bag.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="food" aria-labelledby="gear-heading-food">
+          <h3 class="category-heading" id="gear-heading-food">Cooking, food &amp; water</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="food" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Meals &amp; snacks</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Meals &amp; snacks</span></summary>
+                <p><strong>Purpose:</strong> Fuel your hiking days.</p>
+                <p><strong>When it applies:</strong> Plan each meal and check that your portions fit your trip.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Emergency food reserve</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Emergency food reserve</span></summary>
+                <p><strong>Purpose:</strong> Covers an unexpected delay.</p>
+                <p><strong>When it applies:</strong> Carry an extra day of food that needs no cooking.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Food storage</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Food storage</span></summary>
+                <p><strong>Purpose:</strong> Keeps food and scented items secured.</p>
+                <p><strong>When it applies:</strong> Follow land-manager rules; carry an approved bear canister where required.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Water bottles or reservoir</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Water bottles or reservoir</span></summary>
+                <p><strong>Purpose:</strong> Carry your drinking supply.</p>
+                <p><strong>When it applies:</strong> Plan capacity around conditions and reliable refill points, including a source failure.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Water treatment system</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Water treatment system</span></summary>
+                <p><strong>Purpose:</strong> Makes collected water safer to use.</p>
+                <p><strong>When it applies:</strong> CDC recommends boiling, or filtering then disinfecting. Follow product directions; clear water can contain germs.</p>
+                <p class="gear-source"><a href="https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html">Source: CDC · Water treatment</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Water treatment tablets or drops</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Water treatment tablets or drops</span></summary>
+                <p><strong>Purpose:</strong> Disinfect water as part of your treatment plan.</p>
+                <p><strong>When it applies:</strong> Check which germs the product treats and its required contact time. Tablets and filters are not interchangeable.</p>
+                <p class="gear-source"><a href="https://www.cdc.gov/drinking-water/prevention/water-treatment-hiking-camping-traveling.html">Source: CDC · Water treatment</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Stove, fuel &amp; ignition</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Stove, fuel &amp; ignition</span></summary>
+                <p><strong>Purpose:</strong> Heat meals and water.</p>
+                <p><strong>When it applies:</strong> Bring for cooked meals or boiling water; check current stove and fire restrictions.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="food" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Pot, mug &amp; utensil</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Pot, mug &amp; utensil</span></summary>
+                <p><strong>Purpose:</strong> Prepare and eat your meals.</p>
+                <p><strong>When it applies:</strong> Choose pieces to match your menu; avoid duplicate cookware.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="clothes" aria-labelledby="gear-heading-clothes">
+          <h3 class="category-heading" id="gear-heading-clothes">Clothing &amp; footwear</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="clothes" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Trail shoes or hiking boots</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Trail shoes or hiking boots</span></summary>
+                <p><strong>Purpose:</strong> Support your feet on the trail.</p>
+                <p><strong>When it applies:</strong> Wear comfortable footwear tested before departure.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="clothes" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Hiking clothes &amp; spare socks</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Hiking clothes &amp; spare socks</span></summary>
+                <p><strong>Purpose:</strong> Keep you comfortable while moving.</p>
+                <p><strong>When it applies:</strong> Choose quick-drying layers and comfortable underwear; bring a dry change of socks.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="clothes" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Insulation &amp; rain protection</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Insulation &amp; rain protection</span></summary>
+                <p><strong>Purpose:</strong> Protect you during changing weather.</p>
+                <p><strong>When it applies:</strong> Pack for the harshest plausible conditions, including cold evenings and rain.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="clothes" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Sun protection</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Sun protection</span></summary>
+                <p><strong>Purpose:</strong> Protects skin and eyes.</p>
+                <p><strong>When it applies:</strong> Combine sunglasses, sunscreen, a hat and protective clothing.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="clothes" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Warm hat &amp; gloves</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Warm hat &amp; gloves</span></summary>
+                <p><strong>Purpose:</strong> Add warmth when temperatures fall.</p>
+                <p><strong>When it applies:</strong> Include when forecast lows, elevation or exposure call for them.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="nav" aria-labelledby="gear-heading-nav">
+          <h3 class="category-heading" id="gear-heading-nav">Navigation &amp; communication</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="nav" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Map &amp; compass</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Map &amp; compass</span></summary>
+                <p><strong>Purpose:</strong> Help you locate yourself and follow your route.</p>
+                <p><strong>When it applies:</strong> Carry a physical map and know how to use your navigation tools.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="nav" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Phone or GPS with offline maps</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Phone or GPS with offline maps</span></summary>
+                <p><strong>Purpose:</strong> Supports electronic navigation.</p>
+                <p><strong>When it applies:</strong> Download your route before leaving service; keep a physical backup.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="nav" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Permits &amp; route documents</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Permits &amp; route documents</span></summary>
+                <p><strong>Purpose:</strong> Document authorized access and your plan.</p>
+                <p><strong>When it applies:</strong> Carry required permits; leave your itinerary and return time with a trusted contact.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="nav" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Satellite communicator or beacon</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Satellite communicator or beacon</span></summary>
+                <p><strong>Purpose:</strong> Provides a remote emergency signaling option.</p>
+                <p><strong>When it applies:</strong> Consider for routes beyond cell service; learn the device before departure.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="hygiene" aria-labelledby="gear-heading-hygiene">
+          <h3 class="category-heading" id="gear-heading-hygiene">Hygiene &amp; waste</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="hygiene" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Toothbrush &amp; personal hygiene supplies</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Toothbrush &amp; personal hygiene supplies</span></summary>
+                <p><strong>Purpose:</strong> Support daily hygiene.</p>
+                <p><strong>When it applies:</strong> Pack toiletries and menstrual supplies you use, plus bags for used products.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="hygiene" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Toilet paper &amp; waste supplies</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Toilet paper &amp; waste supplies</span></summary>
+                <p><strong>Purpose:</strong> Allow responsible bathroom stops.</p>
+                <p><strong>When it applies:</strong> Check local disposal rules; carry sealable bags to pack out toilet paper and hygiene waste.</p>
+                <p class="gear-source"><a href="https://lnt.org/why/7-principles/dispose-of-waste-properly/">Source: Leave No Trace · Waste disposal</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="hygiene" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Trowel or human-waste pack-out kit</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Trowel or human-waste pack-out kit</span></summary>
+                <p><strong>Purpose:</strong> Handles waste where toilets are unavailable.</p>
+                <p><strong>When it applies:</strong> Check whether catholes are permitted or a pack-out system is required.</p>
+                <p class="gear-source"><a href="https://lnt.org/why/7-principles/dispose-of-waste-properly/">Source: Leave No Trace · Waste disposal</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="hygiene" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Trash bags</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Trash bags</span></summary>
+                <p><strong>Purpose:</strong> Keep litter and food scraps contained.</p>
+                <p><strong>When it applies:</strong> Pack out all trash and leftovers; check camp before leaving.</p>
+                <p class="gear-source"><a href="https://lnt.org/why/7-principles/dispose-of-waste-properly/">Source: Leave No Trace · Waste disposal</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="hygiene" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Hand &amp; dish cleaning supplies</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Hand &amp; dish cleaning supplies</span></summary>
+                <p><strong>Purpose:</strong> Remove dirt and food residue.</p>
+                <p><strong>When it applies:</strong> Wash at least 200 feet from water, using little soap. Biodegradable soap still affects waterways.</p>
+                <p class="gear-source"><a href="https://lnt.org/why/7-principles/dispose-of-waste-properly/">Source: Leave No Trace · Waste disposal</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="hygiene" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Insect protection</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Insect protection</span></summary>
+                <p><strong>Purpose:</strong> Reduces exposure to biting insects.</p>
+                <p><strong>When it applies:</strong> Pack repellent or a head net for expected bugs and ticks.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="safety" aria-labelledby="gear-heading-safety">
+          <h3 class="category-heading" id="gear-heading-safety">First aid &amp; repairs</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="safety" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Headlamp &amp; spare power</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Headlamp &amp; spare power</span></summary>
+                <p><strong>Purpose:</strong> Provide hands-free light.</p>
+                <p><strong>When it applies:</strong> Check it works and carry spare batteries or compatible backup power.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="safety" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>First-aid kit &amp; medications</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: First-aid kit &amp; medications</span></summary>
+                <p><strong>Purpose:</strong> Support immediate care and personal medical needs.</p>
+                <p><strong>When it applies:</strong> Tailor supplies to your group; know their use and check expiry dates.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="safety" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Emergency shelter access</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Emergency shelter access</span></summary>
+                <p><strong>Purpose:</strong> Provides protection if plans change.</p>
+                <p><strong>When it applies:</strong> Keep shelter accessible during an emergency, including when separated from camp.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="safety" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Emergency ignition supplies</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Emergency ignition supplies</span></summary>
+                <p><strong>Purpose:</strong> Offer an emergency heat or signaling option.</p>
+                <p><strong>When it applies:</strong> Protect matches or a lighter from water; obey local fire rules.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="safety" data-applicability="core">
+              <span class="gear-label gear-label-core">Core</span>
+              <h4>Repair supplies &amp; small tool</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Repair supplies &amp; small tool</span></summary>
+                <p><strong>Purpose:</strong> Address equipment damage.</p>
+                <p><strong>When it applies:</strong> Match tape, patches and tools to the equipment you carry.</p>
+                <p class="gear-source"><a href="https://www.nps.gov/articles/10essentials.htm">Source: NPS · Ten Essentials</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="safety" data-applicability="condition">
+              <span class="gear-label gear-label-condition">Condition-dependent</span>
+              <h4>Power bank &amp; charging cables</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Power bank &amp; charging cables</span></summary>
+                <p><strong>Purpose:</strong> Keep essential electronics powered.</p>
+                <p><strong>When it applies:</strong> Bring when your devices need recharging during the trip.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+        <section class="gear-group" data-gear-group="comfort" aria-labelledby="gear-heading-comfort">
+          <h3 class="category-heading" id="gear-heading-comfort">Comfort extras</h3>
+          <div class="gear-grid">
+            <article class="gear-card" data-category="comfort" data-applicability="comfort">
+              <span class="gear-label gear-label-comfort">Optional comfort</span>
+              <h4>Camp pillow</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Camp pillow</span></summary>
+                <p><strong>Purpose:</strong> Makes sleeping more comfortable.</p>
+                <p><strong>When it applies:</strong> Optional if your sleep setup already works without one.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="comfort" data-applicability="comfort">
+              <span class="gear-label gear-label-comfort">Optional comfort</span>
+              <h4>Camp chair or stool</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Camp chair or stool</span></summary>
+                <p><strong>Purpose:</strong> Offers a place to rest at camp.</p>
+                <p><strong>When it applies:</strong> Weigh the comfort against its packed weight and space.</p>
+                <p class="gear-source"><a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">Source: REI · Gear checklist</a></p>
+              </details>
+            </article>
+            <article class="gear-card" data-category="comfort" data-applicability="comfort">
+              <span class="gear-label gear-label-comfort">Optional comfort</span>
+              <h4>Book, cards or journal</h4>
+              <details>
+                <summary>Purpose &amp; when to bring it<span class="visually-hidden">: Book, cards or journal</span></summary>
+                <p><strong>Purpose:</strong> Provides quiet camp entertainment.</p>
+                <p><strong>When it applies:</strong> Choose a small item if it fits your carrying budget.</p>
+                <p class="gear-source"><a href="https://www.recreation.gov/articles/list/helpful-tips-for-planning-an-overnight-backpacking-trip/1146">Source: Recreation.gov · Overnight trips</a></p>
+              </details>
+            </article>
+          </div>
+        </section>
+      </div>
+      <p class="gear-reviewed">Sources reviewed November 16, 2026. Open a source for fuller guidance.</p>
+    </section>
+
+    <section class="section" id="packing">
+      <div class="section-heading">
+        <p class="eyebrow">03 / Pack your backpack</p>
+        <h2>Check your setup before departure.</h2>
+        <p>
+          Practice packing your equipment and carrying the loaded backpack.
+          Check its fit and whether frequently needed items are accessible.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="section-heading">
+        <p class="eyebrow">04 / Final check</p>
+        <h2>Review your preparations.</h2>
+        <p>
+          Use these checks alongside your complete equipment list
+          and destination-specific requirements.
+        </p>
+      </div>
+      
+      <p id="checklist-progress" role="status" aria-live="polite">
+        0 of 5 checks completed
+      </p>
+      
+      <div class="checklist">
+        <label>
+          <input type="checkbox" name="predeparture" value="route">
+          I have recorded my route and overnight stops.
+        </label>
+
+        <label>
+          <input type="checkbox" name="predeparture" value="permits">
+          I have checked permits, restrictions, and closures.
+        </label>
+
+        <label>
+          <input type="checkbox" name="predeparture" value="conditions">
+          I have checked current weather and trail conditions.
+        </label>
+
+        <label>
+          <input type="checkbox" name="predeparture" value="supplies">
+          I have planned food, drinking water, and water treatment.
+        </label>
+
+        <label>
+          <input type="checkbox" name="predeparture" value="contact">
+          I have shared my itinerary and expected return with a trusted contact.
+        </label>
+      </div>
+
+      <div class="checklist-actions">
+        <button class="button" id="print-guide" type="button">
+            Print guide
+        </button>
+
+        <button class="button button-secondary" id="reset-checklist" type="button">
+            Reset checklist
+        </button>
+        </div>
+
+        <p class="save-note" id="save-note">
+        Checklist progress is saved in this browser.
+        </p>
+
+    </section>
+
+    <section class="section" id="resources">
+      <div class="section-heading">
+        <p class="eyebrow">Keep learning</p>
+        <h2>Useful resources</h2>
+      </div>
+
+      <ul class="resource-list">
+        <li>
+          <a href="https://www.nps.gov/subjects/healthandsafety/trip-planning-guide.htm">
+            National Park Service: Trip Planning Guide
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.rei.com/learn/expert-advice/backpacking-checklist.html">
+            REI: Backpacking Gear Checklist
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.nps.gov/articles/10essentials.htm">
+            National Park Service: Ten Essentials
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Traveler’s Guide to Backpacking</p>
+    <a href="#start">Back to top ↑</a>
+  </footer>
+</body>
+</html>
